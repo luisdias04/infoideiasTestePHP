@@ -4,7 +4,11 @@ namespace Src\Calculos\ConverterAnosParaSeculo;
 
 class SufixoSeculoParaSomar
 {
-    private $sufixoParaSomar;    
+    private $sufixoParaSomar;
+    
+    function __construct($anoEmArray){
+        $this->getSufixo($anoEmArray);
+    }
     
     public function getSufixo($anoEmArray){
         $caractere=count($anoEmArray);

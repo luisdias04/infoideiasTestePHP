@@ -7,7 +7,7 @@ class SomaPorCriterio
     private $valorParaSomar;
     
     function __construct($entradavalor){
-        somarPorCriterioImpar($entradavalor);
+        $this->somarPorCriterioImpar($entradavalor);
     }
     
     public function somarPorCriterioImpar($entradavalor){       

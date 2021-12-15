@@ -13,5 +13,5 @@
             "email": "luiscarlos@bithelp.tech"
         }
     ],
-    "require": {}
+    "require": {"vendor":"vendor/autoload.php"}
 }
