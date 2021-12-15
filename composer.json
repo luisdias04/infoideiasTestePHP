@@ -1,0 +1,17 @@
+{
+    "name": "lideranca/infoideias",
+    "description": "prova infoideias php",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "Src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis Carlos",
+            "email": "luiscarlos@bithelp.tech"
+        }
+    ],
+    "require": {}
+}
