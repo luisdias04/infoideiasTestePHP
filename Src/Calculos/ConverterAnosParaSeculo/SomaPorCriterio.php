@@ -4,19 +4,22 @@ namespace Src\Calculos\ConverterAnosParaSeculo;
 
 class SomaPorCriterio
 {
-    private $valorParaSomar;
+    public $valorParaSomar;
     
     function __construct($entradavalor){
-        $this->somarPorCriterioImpar($entradavalor);
+        $this->somarPorCriterioDigitosFinais($entradavalor);
     }
     
-    public function somarPorCriterioImpar($entradavalor){       
-        
-            if($entradavalor%2 != 0){
-                    $this->valorParaSomar=1;
-            }else{
+    public function somarPorCriterioDigitosFinais($entradavalor){
+            $contagemCaractere=count($entradavalor);
+            $ultimoDigito=$entradavalor[$contagemCaractere-1];
+            $penultimoDigito=$entradavalor[$contagemCaractere-2];  
+            
+            if($contagemCaractere>=2 && $ultimoDigito==0 && $penultimoDigito==0){
                 $this->valorParaSomar=0;
-            }
+            }else{
+                $this->valorParaSomar=1;
+            } 
 
         return $this->valorParaSomar;
     }

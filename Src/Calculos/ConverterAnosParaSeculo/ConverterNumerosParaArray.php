@@ -12,7 +12,7 @@ class ConverterNumerosParaArray
     
     public function converter($numerosParaConverter){
         $this->numerosEmArray = str_split($numerosParaConverter);
-        return $this->numerosEmArray;
+        return (array)$this->numerosEmArray;
     }
     
 }
