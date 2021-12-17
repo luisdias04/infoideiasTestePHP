@@ -2,7 +2,9 @@
 
 namespace Src\Calculos\NumerosPrimos;
 
-class PegarNumerosPrimos{
+/* require_once'../../../vendor/autoload.php' */
+
+class Primos{
 
     public $primos=array();
 
