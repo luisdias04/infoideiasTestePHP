@@ -2,8 +2,6 @@
 
 namespace Src\Calculos\NumerosPrimos;
 
-/* require_once'../../../vendor/autoload.php' */
-
 class Primos{
 
     public $primos=array();

@@ -2,14 +2,10 @@
 
 namespace Src\Modulos\EntrarAnoSairSeculo;
 
-//require_once'../../../vendor/autoload.php';
-
 use Src\Calculos\ConverterAnosParaSeculo\ValidarEntradaDeValores;
 use Src\Calculos\ConverterAnosParaSeculo\ConverterNumerosParaArray;
 use Src\Calculos\ConverterAnosParaSeculo\SomaPorCriterio;
 use Src\Calculos\ConverterAnosParaSeculo\SufixoSeculoParaSomar;
-
-
 
 class AnoParaSeculo
 {
@@ -19,12 +15,10 @@ class AnoParaSeculo
     public $ConverterNumerosParaArray;
     public $SomaPorCriterio;
     public $SufixoSeculoParaSomar;    
-    
 
     function __construct($anoParaSeculo){
         $a= new ValidarEntradaDeValores($anoParaSeculo);
         $this->seculoValido= ($a->anoValidado==-1)?false:true;
-
         if(!$this->seculoValido || !is_numeric($anoParaSeculo)){
             $this->seculo="Ano inválido ou não faz parte dos numeros naturais maior que zero!";            
         }else{

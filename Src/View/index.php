@@ -19,6 +19,7 @@ $primosExcetoValorDeEntrada=new PrimosSemVrsEntradas($primosV1,$primosV2);
 foreach($primosExcetoValorDeEntrada->primosSemEntradas as $valor){
     echo $valor.",";
 }
+
 echo "<br/> O Array de valores aleatórios são : ";
 
 $numeros=array();

@@ -19,9 +19,7 @@ class SomaPorCriterio
                 $this->valorParaSomar=0;
             }else{
                 $this->valorParaSomar=1;
-            } 
-
+            }
         return $this->valorParaSomar;
     }
-
 }

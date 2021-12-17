@@ -2,8 +2,6 @@
 
 namespace Src\Modulos\Primos;
 
-//require_once'../../../vendor/autoload.php';
-
 use Src\Calculos\NumerosPrimos\Primos;
 use Src\Calculos\NumerosPrimos\PrimosRetirarV1V2;
 
@@ -21,7 +19,3 @@ class PrimosSemVrsEntradas{
         $this->primosSemEntradas=$b->primosSemAsEntradas;        
     }
 }
-
-
-
-
