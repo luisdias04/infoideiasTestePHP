@@ -22,10 +22,21 @@ foreach($primosExcetoValorDeEntrada->primosSemEntradas as $valor){
 
 echo "<br/> O Array de valores aleatórios são : ";
 
-$numeros=array();
-for($cont=0;$cont<20;$cont++){
-    for($i=0;$i<20;$i++){    
-        array_push($numeros,rand(1,10));        
-    }
-    echo $numeros[$cont].",";
+$numerosAleatorios=array();
+$indiceNumerosAleatorios;
+$numerosNaoRepetidos=array();
+
+for($i=0;$i<20;$i++){    
+array_push($numerosAleatorios,rand(1,10));
+echo $numerosAleatorios[$i].",";
 }
+
+$contagemNumeros=array_count_values($numerosAleatorios);
+$indiceNumerosAleatorios=array_keys($contagemNumeros);
+echo"<br/>Dos 20 números aleatórios os que não se repetem são: "; 
+foreach($indiceNumerosAleatorios as $key){
+    if($contagemNumeros[$key]==1){
+        array_push($numerosNaoRepetidos,$key);
+        echo"$key,";
+    }
+} 
