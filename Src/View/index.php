@@ -13,17 +13,25 @@ $primosV1 =
 $primosV2 = 
 20 ;
 
-$anoParaSeculo = new AnoParaSeculo ($digiteAnoParaconverterEmSeculo);
-$seculo = $anoParaSeculo -> seculo;
-echo "O Século do ano $digiteAnoParaconverterEmSeculo = $seculo <br/>" ;
-echo "Primos com valores informados retirado: " ;
+$anoParaSeculo = 
+new AnoParaSeculo ($digiteAnoParaconverterEmSeculo) ;
+$seculo = 
+$anoParaSeculo -> seculo ;
+echo 
+"O Século do ano $digiteAnoParaconverterEmSeculo = $seculo <br/>" ;
+echo 
+"Primos com valores informados retirado: " ;
  
-$primosExcetoValorDeEntrada = new PrimosSemVrsEntradas ($primosV1,$primosV2);
+$primosExcetoValorDeEntrada = 
+new PrimosSemVrsEntradas ($primosV1,$primosV2);
+
 foreach ($primosExcetoValorDeEntrada -> primosSemEntradas as $valor){
-    echo $valor . "," ;
+    echo 
+    $valor . "," ;
 }
 
-echo "<br/> O Array de valores aleatórios são :" ;
+echo
+"<br/> O Array de valores aleatórios são :" ;
 
 $numerosAleatorios = 
 array() ;
@@ -41,7 +49,8 @@ array_count_values ($numerosAleatorios) ;
 $indiceNumerosAleatorios = 
 array_keys ($contagemNumeros) ;
 
-echo "<br/>Dos 20 números aleatórios os que não se repetem são:" ; 
+echo
+"<br/>Dos 20 números aleatórios os que não se repetem são:" ; 
 
 foreach ($indiceNumerosAleatorios as $key){
     if($contagemNumeros [$key] == 1){
@@ -49,5 +58,3 @@ foreach ($indiceNumerosAleatorios as $key){
         echo "$key," ;
     }
 } 
-
-
