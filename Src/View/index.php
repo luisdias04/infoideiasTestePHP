@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\View;
+namespace Src\View ;
 
-require_once'../../vendor/autoload.php';
-use Src\Modulos\EntrarAnoSairSeculo\AnoParaSeculo;
-use Src\Modulos\Primos\PrimosSemVrsEntradas;
+require_once'../../vendor/autoload.php' ;
+use Src\Modulos\EntrarAnoSairSeculo\AnoParaSeculo ;
+use Src\Modulos\Primos\PrimosSemVrsEntradas ;
 
 $digiteAnoParaconverterEmSeculo = 
-20265 ;
+2021 ;
 $primosV1 = 
 5 ;
 $primosV2 = 
@@ -16,32 +16,32 @@ $primosV2 =
 $anoParaSeculo = 
 new AnoParaSeculo ($digiteAnoParaconverterEmSeculo) ;
 $seculo = 
-$anoParaSeculo -> seculo ;
+$anoParaSeculo->seculo ;
 echo 
 "O Século do ano $digiteAnoParaconverterEmSeculo = $seculo <br/>" ;
 echo 
-"Primos com valores informados retirado: " ;
+"Primos com valores inicial e final retirado, caso houver: " ;
  
 $primosExcetoValorDeEntrada = 
-new PrimosSemVrsEntradas ($primosV1,$primosV2);
+new PrimosSemVrsEntradas ($primosV1, $primosV2);
 
-foreach ($primosExcetoValorDeEntrada -> primosSemEntradas as $valor){
+foreach ($primosExcetoValorDeEntrada->primosSemEntradas as $valor){
     echo 
     $valor . "," ;
 }
 
 echo
-"<br/> O Array de valores aleatórios são :" ;
+"<br/> O Array de valores aleatórios são: " ;
 
 $numerosAleatorios = 
-array() ;
+array () ;
 $indiceNumerosAleatorios ;
 $numerosNaoRepetidos = 
-array() ;
+array () ;
 
 for ($i = 0 ; $i < 20 ; $i++){    
 array_push ($numerosAleatorios, rand(1,10));
-echo $numerosAleatorios [$i] . ",";
+echo $numerosAleatorios[$i] . ",";
 }
 
 $contagemNumeros = 
@@ -50,11 +50,11 @@ $indiceNumerosAleatorios =
 array_keys ($contagemNumeros) ;
 
 echo
-"<br/>Dos 20 números aleatórios os que não se repetem são:" ; 
+"<br/>Dos 20 números aleatórios, os que não se repetem são: " ; 
 
 foreach ($indiceNumerosAleatorios as $key){
-    if($contagemNumeros [$key] == 1){
-        array_push ($numerosNaoRepetidos, $key);
+    if ($contagemNumeros[$key] == 1){
+        array_push ($numerosNaoRepetidos, $key) ;
         echo "$key," ;
     }
-} 
+}
