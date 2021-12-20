@@ -47,7 +47,7 @@ class AnoParaSeculo
     public function getSeculo(){
         $this->seculo =        
         $this->SufixoSeculoParaSomar->sufixoParaSomar +        
-        $this->SomaPorCriterio->valorParaSomar;
-        return $this->seculo;
+        $this->SomaPorCriterio->valorParaSomar ;
+        return $this->seculo ;
     }
 }
